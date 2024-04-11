@@ -42,8 +42,14 @@ wire CLK500Hz, CLK1Hz;
 wire [15:0] seed;
 wire [15:0] data;
 
+//clock for 500hz and 1hz
+clock_tree clock_tree_u0(sysclk, rstn, CLK500Hz, CLK1Hz);
+
+//draw value from seed to input for random_mod
+seed_in seed_in_u0(CLK500Hz, rstn, seed);
+
 // output from seed input to random number generator; output digits 
-random_mod random_mod_u0(CLK500Hz, rstn, seed_value, data);
+random_mod random_mod_u0(CLK500Hz, rstn, seed, data);
  
 // output of digits from random number generator to 7 segment display 
 segment segment_u0(rstn,CLK500Hz,data,

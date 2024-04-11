@@ -3,7 +3,7 @@
 module segment(
     input rstn,
     input CLK500Hz,
-    input [15:0]seed_value, 
+    input [15:0] data, 
     input [3:0] digit_order,
     input [7:0] digit_val
     );
@@ -27,12 +27,12 @@ always @(negedge rstn,posedge CLK500Hz)begin
     end
 end
 
-always @(an_r,seed_value)begin
+always @(an_r,data)begin
     case(an_r)
-        4'b0001: cur_num_r <= seed_value[3:0];
-        4'b0010: cur_num_r <= seed_value[7:4];
-        4'b0100: cur_num_r <= seed_value[11:8];
-        4'b1000: cur_num_r <= seed_value[15:12];
+        4'b0001: cur_num_r <= data[3:0];
+        4'b0010: cur_num_r <= data[7:4];
+        4'b0100: cur_num_r <= data[11:8];
+        4'b1000: cur_num_r <= data[15:12];
         default: cur_num_r <= 4'b0;
     endcase    
 end

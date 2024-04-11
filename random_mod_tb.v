@@ -20,8 +20,8 @@ initial begin
     rst_n = 1'b0;
     seed = 16'd5555;
     repeat(5) begin 
-        #5 rst_n = 1'b1;
-        #50 rst_n = 1'b0;
+        #10 rst_n = 1'b1;
+        #100 rst_n = 1'b0;
     end
     #10 $stop;
 end

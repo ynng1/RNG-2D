@@ -2,7 +2,7 @@
 
 module random_mod(
     input clk,
-    input rstn,
+    input rst_n,
     input [15:0] seed,
     output reg [15:0] data
 );
@@ -27,8 +27,8 @@ always @* begin
     data_next[0] = data[0] ^ data_next[2];  
 end
 
-always @(posedge clk or negedge rstn)
-    if (!rstn) begin
+always @(posedge clk or negedge rst_n)
+    if (!rst_n) begin
         data <= seed;
     end
     else begin

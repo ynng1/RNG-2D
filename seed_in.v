@@ -26,7 +26,7 @@ module seed_in(
     );
     
 always @* begin 
-    seed = 16'h5555;
+    seed = 16'd8808;
 end
 
 endmodule

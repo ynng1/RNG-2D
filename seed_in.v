@@ -20,6 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module seed_in(
-
+    input CLK500Hz,
+    input rstn,
+    output reg [15:0]seed
     );
+    
+always @* begin 
+    seed = 16'd8808;
+end
+
 endmodule

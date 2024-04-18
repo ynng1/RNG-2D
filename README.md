@@ -25,7 +25,9 @@ We used the LFSR as it has a relatively normal distribution in its output in gen
 Our analogue input signal is derived from audio signals. Music played from the device is output through a 3.5mm auxiliary jack and is fed into a LM386 audio amplifier. The music volume output is controlled, and audio signal is adjusted to amplify a value ranging from approximately -1.2v to +1.2v. 
 The AC audio signal is then DC biased using a coupling capacitor and a potential divider circuit. We considered the RC time constant of the coupling capacitor, ensuring the time constant of the capacitor used must be below 50microseconds, so the discharge would not distort the output of the AC audio signal. The AC signal is given a 1.5V DC bias so the FPGA analogue input is hovering between 0V and +2.7V. This fits within the 0 to 3.3V range of the FPGA analogue input.
 <h4>Here's the schemetic to our circuit:</h4>
-![Analogue Input Circuit](https://github.com/ynng1/RNG-2D/assets/94187124/f506966e-5134-44ca-b66c-8b382636a36e)
+
+![Analogue Input Circuit](https://github.com/ynng1/RNG-2D/assets/94187124/015c58da-4cce-41cd-ad53-e021a67f68df)
+
 
 <br>
 <h3>This is a video of the circuit working:</h3>

@@ -1,5 +1,4 @@
 <h1>Audio-based OTP generator</h1>
-<br>
 <h3>Introduction and Objective</h3>
 <p>The goal of the project is to utilise an audio signal to generate a string of random numbers to be used for one-time passwords(OTP).
 <br>
@@ -43,8 +42,7 @@ The AC audio signal is then DC biased using a coupling capacitor and a potential
 <h4>Challenges faced:</h4>
 <p>Figuring out the algorithm for generating random numbers using a seed proved to the most challenging aspect of this project since we were not able to use numpy's built-in functions to act as our generator. Hence, a significant amount of time was spent tweaking the algorithm and proving that our generated random numbers fits a gaussian distribution. Alas, we were not able to settle on an algorithm that would generate a string of random numbers that always fit a gaussian distribution with our given input, but we believe that with more time we could have explored our proposed alternative methods and achieve a better result.</p>
 
-<p>Tweaking of the analogue signal to match our use case was also a challenge. Certain knowledge learnt from Circuits and Electronics were required to understand how to translate the AC voltage wave so the FPGA analogue input would be values in the positive region. Thankfully we had Prof. Joel, and Prof. Tee Hui, together with friends (Tom, Wyndham, Elvis) that really helped us figure things out.<p>
+<p>Tweaking of the analogue signal to match our use case was also a challenge. Certain knowledge learnt from Circuits and Electronics were required to understand how to translate the AC voltage wave so the FPGA analogue input would be values in the positive region. There were issues of the AC voltage clipping, distortion of the signal which required careful consideration of the electronic components. Thanks to Prof. Joel, and Prof. Tee Hui, together with friends (Tom, Wyndham, Elvis) that really helped us figure things out.<p>
   
-<p>Insert circuit's challenges</p>
 <h4>Learnings:</h4>
 <p>Through this project, our team has been exposed to the importance of the statistical and numerical researches that are being done by mathematicians. While we did not delve into the complexities of proving our methods numerically, we are now well aware of the number of factors that needs to be proved before we can validate that our method of random number generation is sufficiently robust to be put into real applicaiton. Delving into the adjusting of our analogue signal also helped recall our electronics knowledge, and exposed us to some useful simulation tools. All in all, our team has grown to have a new profound respect for the academics that spend their lives honing and improving the realiability of the cybersecruity space.</p>

@@ -7,6 +7,11 @@ From a playlist of 25000 songs, the user would use the random shuffle feature to
 The voltage of the audio signal is then converted by a CMOD-A7's XADC to a digital output that acts as the seed for the random number generation.</p>
 <br>
 <h3>Here's how the random number generation works:</h3>
+We use a 16 Bit Linear Feedback Shift Register (LFSR) for our pseudo random generator. For the initial input, we use a seed value that is captured from the XADC (the analog pin of the CMOD A7). For the subsequent inputs, We choose to tap the values at 0,2,3,5 and use the output as a feedback loop into the input.
+
+The seed value is captured every second from the constant input from the XADC and is constantly therefore constantly changing. When the reset button is pressed, the seed value would then return to its default seed value. 
+
+We used the LFSR as it has a relatively normal distribution in its output in generating random nummbers.
 <h4>Advantages of using our method:</h4>
 <h4>Disadvantages of using our method:</h4>
 <br>

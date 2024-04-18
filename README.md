@@ -23,6 +23,13 @@ We used the LFSR as it has a relatively normal distribution in its output in gen
 <h3>Some important point to note about the circuit: (How the circuit works)</h3>
 <br>
 <h3>This is a video of the circuit working:</h3>
+
+<br>
+https://github.com/ynng1/RNG-2D/assets/163510534/4efd0c9e-b643-474c-8d42-8fd5adb239fd
+<br>
+<p>The video demonstrates the cirucit taking in an audio input from the phone and generates an randomised OTP on the 7-segment display usingour algorithm that was flashed onto the Cmod-A7 beforehand.</p>
+
+
 <br>
 <h3>Team reflection:</h3>
 <h4>Challenges faced:</h4>

@@ -20,8 +20,12 @@ Since the input seed is constantly changing due to the nature of the input music
 There might also be cases where the song is repeating perfecting with the time delay in capturing the seed value, this would cause the seed value to be perfectly constant and the output to be constant since the first output of the same seed is always being produced. 
 <br>
 <h3>Future improvements:</h3>
+Another method can be by identifying the pattern of the input music and deriving an algorithm to calculate a special seed value. This way, the calculated seed value would be unique for that song despite having fluctuations in the music input. 
 <h4>Alternative methods that could be explored:</h4>
+The correlation of the input song to the output of the LFSR can be studied to maximise the normal distribution of the LFSR. 
+This can be done by changing to different genres of songs / the beats per minute (BPM) of the input song and studying the correlation of BPM, type of song played, and delayed time in capturing the output of the song which affects the output of the LFSR.
 <h4>Potential drawbacks of alternative methods:</h4>
+The downside of constantly capturing music at a fixed interval as an input seed would be that there would be too many variables. Latency of the audio input / latency of audio amplifier / type of songs available might affect the input seed which cause more repetitions in the output. 
 <br>
 
 <h3>Analogue Input to FPGA</h3>

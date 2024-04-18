@@ -13,7 +13,11 @@ The seed value is captured every second from the constant input from the XADC an
 
 We used the LFSR as it has a relatively normal distribution in its output in generating random nummbers.
 <h4>Advantages of using our method:</h4>
+LFSR has a low power consumption, is easy to construct from simple electromechanical or electronic circuits, has long periods, and very uniformly distributed output streams
 <h4>Disadvantages of using our method:</h4>
+A 16 bit Linear Feedback shift register would not entirely have a normal distribution constantly since it is heavily dependent on the input seed value. This can cause repetition in the outputs in some special cases. 
+Since the input seed is constantly changing due to the nature of the input music, there might be special cases where the first value prompted from the secondary seed to equate to the previous outputs. 
+There might also be cases where the song is repeating perfecting with the time delay in capturing the seed value, this would cause the seed value to be perfectly constant and the output to be constant since the first output of the same seed is always being produced. 
 <br>
 <h3>Future improvements:</h3>
 <h4>Alternative methods that could be explored:</h4>
